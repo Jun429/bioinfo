@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5d8487f8-50e7-4433-b755-7c65b329940d" name="bioinfo@47.111.20.134" url="http://www.tlds.cc:8000">
+        <fileTransfer accessType="SFTP" host="47.111.20.134" port="22" sshConfigId="cf27826b-8888-4ed5-9aa0-cc15221d0a87" sshConfig="root@47.111.20.134:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
