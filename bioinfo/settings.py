@@ -14,6 +14,11 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+secret_key_path = os.path.join(BASE_DIR,"secretKey.txt")
+secret_obj = {}
+with open(secret_key_path) as f:
+    secret_obj = eval(f.read())
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -79,11 +84,11 @@ DATABASES = {
     'default': {
         # key值必须都是大写
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'laboratory',
-        'HOST': '8.210.78.145',
-        'PORT': 3306,
-        'USER': 'root',
-        'PASSWORD': 'anhuixinji423',
+        'NAME': secret_obj['NAME'],
+        'HOST': secret_obj['HOST'],
+        'PORT': secret_obj['PORT'],
+        'USER': secret_obj['USER'],
+        'PASSWORD': secret_obj['PASSWORD'],
     }
 }
 
