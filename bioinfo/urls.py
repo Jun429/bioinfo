@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from laboratory import views
 urlpatterns = [
+    path('', views.index, name='index'),
     path('admin/', admin.site.urls),
     path('bioinfolab/',include('laboratory.urls')),
     path('manager/', include('manager.urls')),
