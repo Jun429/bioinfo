@@ -5,7 +5,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - /data/www/bioinfo1/bioinfo:/app/bioinfo
+      - /data/www/bioinfo1/bioinfo:/app
   web:
     image: nginx:latest
     ports:
