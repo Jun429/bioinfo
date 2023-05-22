@@ -5,10 +5,10 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - /data/www/bioinfo1/bioinfo
+      - /data/www/bioinfo1/bioinfo:/app/bioinfo
   web:
     image: nginx:latest
     ports:
       - 80:80
     volumes:
-      - /data/www/bioinfo1/conf.d
+      - /data/www/bioinfo1/conf.d:/etc/nginx/conf.d
