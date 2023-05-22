@@ -4,7 +4,11 @@ services:
     image: bioinfo:v1
     ports:
       - 8000:8000
+    volumes:
+      - /data/www/bioinfo1/bioinfo
   web:
     image: nginx:latest
     ports:
       - 80:80
+    volumes:
+      - /data/www/bioinfo1/conf.d
